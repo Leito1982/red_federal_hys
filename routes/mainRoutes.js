@@ -1,32 +1,14 @@
 const express = require('express');
-const path = require ("path");
 const router = express.Router();
+const mainController = express("./controllers/mainControllers");
 
-router.get ("/", function (req, res) {
+router.get ("/", mainController.index );
 
-    res.sendFile ( path.join (__dirname, "../views/index.html"))
+router.get ("/legislacion",mainController.legislacion);
 
-});
+router.get ("/Obras",mainController.obras);
 
-router.get ("/legislacion", function (req, res) {
-
-    res.send ("legislacion");
-   // res.sendFile ( path.join (__dirname, "../views/index.html"))
-
-});
-
-router.get ("/Obras", function (req, res) {
-
-res.sendFile ( path.join (__dirname, "../views/obras.html"))
-
-});
-
-router.get ("/contacto", function (req, res) {
-
-    res.send ("pagina de contacto");
-   // res.sendFile ( path.join (__dirname, "../views/index.html"))
-
-});
+router.get ("/contacto",mainController.contacto);
 
 
 
