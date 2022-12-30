@@ -1,15 +1,33 @@
 const express = require('express');
 const router = express.Router();
-const mainController = express("./controllers/mainControllers");
+const mainControllers = require ('../controllers/mainControllers');
 
-router.get ("/", mainController.index );
+// router.get('/', (req, res) => {
+//     res.render('index.ejs');
+// });
 
-router.get ("/legislacion",mainController.legislacion);
+// router.get('/obras', (req, res) => {
+//     res.render('obras.ejs');
+// });
 
-router.get ("/Obras",mainController.obras);
+// router.get("/legislacion", (req, res) => {
 
-router.get ("/contacto",mainController.contacto);
+//     res.send("legislacion");
+// });
+
+// router.get('/contacto', (req, res) => {
+//     res.send("pagina de contacto");
+// });
 
 
+
+
+router.get ("/", mainControllers.index);
+
+router.get ("/legislacion",mainControllers.legislacion);
+
+router.get ("/obras",mainControllers.obras);
+
+router.get ("/contacto",mainControllers.contacto);
 
 module.exports = router;

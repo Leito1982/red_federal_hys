@@ -1,34 +1,25 @@
-const path = require("path");
+const controlador = {
 
-
-const mainController = {
-
-    index: function (req, res) {
-res.render('index.ejs');
-        // res.sendFile(path.join(__dirname, "../views/index.html"))
-
+    index: (req, res) => {
+        res.render('index');
     },
 
-    obras: function (req, res) {
-res.render('obras.ejs');
-     //   res.sendFile(path.join(__dirname, "../views/obras.html"))
+    obras: (req, res) => {
+        res.render('obras.ejs');
+        // res.sendFile(path.join(__dirname, "../views/obras.ejs"));
 
     },
-    legislacion: function (req, res) {
+    legislacion: (req, res) => {
 
         res.send("legislacion");
         // res.sendFile ( path.join (__dirname, "../views/legislacion.html"))
-
     },
 
-    contacto: function (req, res) {
+    contacto: (req, res) => {
 
         res.send("pagina de contacto");
         // res.sendFile ( path.join (__dirname, "../views/index.html"))
-
-    }
-
+    },
 
 }
-
-module.exports = mainController;
+module.exports = controlador; 
