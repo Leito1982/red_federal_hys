@@ -21,43 +21,13 @@
 <body>
 <main>
 
-    <header class="encabezado">
-<img src="/img/inti-logo-intranet.png" alt="logo-inti">
-
-        <nav class="menu">
-<ul class="menuIzquierda">
-
-   <a href="#"> <li> Inicio </li> </a>
-   <a href="/legislacion"> <li> Legislacion </li> </a>
-   <a href="#"> <li> Integrantes </li> </a>
-   <a href="#"> <li> Preguntas Frecuentes </li> </a>
-   
-   <a href="/contacto"> <li> Contacto </li> </a>
-   
-</ul>
-
-<ul class="menuDerecho">
-    <a href="#"> <li> Sedes </li> </a>
-    <a href="#"> <li> Regiones </li> </a>
-    <a href="#"> <li> Profesionales </li> </a>
-    <a href="#"> <li> Delegados </li> </a>
-    <a href="/obras"> <li> Obras </li> </a>
-
-</ul>
-
-</nav>
-
-    </header>
+    <%- include ("partials/header.ejs") %>
     
 <h2>BIENVENIDOS A LA RED FEDERAL</h2>
 <img src="/img/Isologotipo_institucional.jpg" alt="logo">
 
 
-<footer>
-
-   <p></p> correo: hys@inti.gob.ar
-    <i class="fa-brands fa-whatsapp"></i>
-</footer>    
+<%- include ("partials/footer.ejs") %>     
     
 </main>
 </body>

@@ -1,5 +1,25 @@
 body {
     background-color: beige;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    margin : auto;
+
+}
+table tr { 
+ height: 30px;
+}
+
+form {
+    height: 650px;
+    margin: auto;
 }
 
 .subidaArchivo {

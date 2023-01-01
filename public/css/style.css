@@ -8,25 +8,46 @@ body {
     text-align: center;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
 
+.menuIzquierda,
+.menuDerecho {
+    display: none;
 }
 
-nav ul {
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    text-decoration: none;
-    list-style-type: none;
-}
+@media (min-width: 768px) {
+    
+    .menuIzquierda,
+    .menuDerecho {
+        display: flex;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    
+    
+    
+    nav a  {
+        text-decoration: none;
+    }
+    nav ul {
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration: none;
+        list-style-type: none;
+    }
+    
+    .fa-bars {
+        display: none;
+        color: blue ;
+    }
+    
 
-
-nav a  {
-    text-decoration: none;
 }
